@@ -1,0 +1,51 @@
+{
+  "vpc-provider:account=537236557534:filter.vpc-id=vpc-09e3318a260b7cedb:region=af-south-1:returnAsymmetricSubnets=true": {
+    "vpcId": "vpc-09e3318a260b7cedb",
+    "vpcCidrBlock": "10.0.0.0/16",
+    "ownerAccountId": "537236557534",
+    "availabilityZones": [],
+    "subnetGroups": [
+      {
+        "name": "Public",
+        "type": "Public",
+        "subnets": [
+          {
+            "subnetId": "subnet-0d63c59cc72bf0429",
+            "cidr": "10.0.0.0/20",
+            "availabilityZone": "af-south-1a",
+            "routeTableId": "rtb-0fb52e10921ca66ae"
+          },
+          {
+            "subnetId": "subnet-02449066d7276d856",
+            "cidr": "10.0.16.0/20",
+            "availabilityZone": "af-south-1b",
+            "routeTableId": "rtb-0fb52e10921ca66ae"
+          }
+        ]
+      },
+      {
+        "name": "Isolated",
+        "type": "Isolated",
+        "subnets": [
+          {
+            "subnetId": "subnet-0fcd277178ceff261",
+            "cidr": "10.0.128.0/20",
+            "availabilityZone": "af-south-1a",
+            "routeTableId": "rtb-06df9dfe882b3330f"
+          },
+          {
+            "subnetId": "subnet-065a5cbb305f85176",
+            "cidr": "10.0.144.0/20",
+            "availabilityZone": "af-south-1b",
+            "routeTableId": "rtb-03b6e7dc32cfee75f"
+          }
+        ]
+      }
+    ]
+  },
+  "ami:account=537236557534:filters.image-type.0=machine:filters.name.0=ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*:filters.state.0=available:owners.0=099720109477:region=af-south-1": "ami-0c71090793f10ecde",
+  "security-group:account=537236557534:region=af-south-1:securityGroupName=dev-sg:vpcId=vpc-09e3318a260b7cedb": {
+    "securityGroupId": "sg-005993f765ecc72bf",
+    "allowAllOutbound": false
+  }
+}

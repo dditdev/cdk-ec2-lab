@@ -38,15 +38,7 @@ export class MyFirstCdkAppStack extends cdk.Stack {
       },
     });
 
-    // Ensure public IP
-    const cfnInstance = instance.node.defaultChild as ec2.CfnInstance;
-    cfnInstance.addPropertyOverride('NetworkInterfaces', [
-      {
-        AssociatePublicIpAddress: true,
-        DeviceIndex: '0',
-      },
-    ]);
-
+        
     // Outputs
     new cdk.CfnOutput(this, 'InstanceId', {
       value: instance.instanceId,
